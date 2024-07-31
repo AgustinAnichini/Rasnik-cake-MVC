@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* font-family: "Bodoni Moda", serif; */
+}
+
+:root {
+    --btn-color: #f27979;
+    --line-color: #ca9e71;
+    --titulo-color: rgb(140, 32, 22);
+    --footer-color: #ffe1df;
+    --form-color: #192252;
+}
+
+header {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    top: 3%;
+    z-index: 99;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    margin-right: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+
+.menu a:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.contenedor-principal {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    position: relative;
+}
+
+.primero,
+.segundo {
+    flex: 1; /* Distribuye equitativamente el espacio entre los elementos */
+    background-color: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-inicio {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.info-inicio {
+    position: absolute;
+    top: 30%;
+    z-index: 99;
+    text-align: center;
+    color: white;
+    width: 75%;
+}
+
+.container-img {
+    display: flex;
+    justify-content: center;
+}
+
+.container-img img {
+    width: 25%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.info-inicio h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 15px;
+    font-family: "Bodoni Moda", serif;
+}
+
+.info-inicio p {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: smaller;
+}
+
+.info-inicio span {
+    color: white;
+    font-weight: bolder;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.info-inicio form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.info-inicio input {
+    width: 50%;
+    padding: 5px;
+    background-color: transparent;
+    border-bottom: solid 2px var(--btn-color);
+    border-radius: 4px;
+    color: white;
+}
+
+.info-inicio input::placeholder {
+    color: white;
+    padding: 5px;
+}
+
+#inicioSesion {
+    width: 25%;
+    padding: 5px;
+    background-color: transparent;
+    border: solid 2px var(--btn-color);
+    border-radius: 20px;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+#inicioSesion:hover {
+    background-color: white;
+    color: var(--btn-color);
+    font-weight: 600;
+    transition: 0.5s ease-in-out;
+    border: solid 2px var(--btn-color);
+}
+
+.password {
+    color: var(--btn-color);
+    text-decoration: none;
+}
+
+.password:hover {
+    border-bottom: solid 2px var(--btn-color);
+}
+
+.redesInicio{
+    position: fixed;
+    right: 15px;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: auto;
+    gap: 1rem;
+    align-items: center;
+}
+
+.redesInicio img{
+    width: 40%;
+    height: auto;
+}

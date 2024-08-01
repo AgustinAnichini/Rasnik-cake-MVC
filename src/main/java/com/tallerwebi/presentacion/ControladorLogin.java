@@ -35,7 +35,13 @@ public class ControladorLogin {
     public ModelAndView validarLogin(@ModelAttribute("datosLogin") DatosLogin datosLogin, HttpServletRequest request) {
         ModelMap model = new ModelMap();
 
+        // Imprime los datos de entrada para asegurarte de que están llegando correctamente
+        System.out.println("Email: " + datosLogin.getEmail());
+        System.out.println("Password: " + datosLogin.getPassword());
+
         Usuario usuarioBuscado = servicioLogin.consultarUsuario(datosLogin.getEmail(), datosLogin.getPassword());
+        System.out.println("Usuario encontrado: " + usuarioBuscado); // aqui llega NULL pero se guardo bien
+
         if (usuarioBuscado != null) {
             request.getSession().setAttribute("ROL", usuarioBuscado.getRol());
             return new ModelAndView("redirect:/home");
@@ -44,6 +50,7 @@ public class ControladorLogin {
         }
         return new ModelAndView("login", model);
     }
+
 
     @RequestMapping(path = "/registrarme", method = RequestMethod.POST)
     public ModelAndView registrarme(@ModelAttribute("usuario") Usuario usuario) {
